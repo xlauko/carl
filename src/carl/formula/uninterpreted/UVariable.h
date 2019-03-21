@@ -34,6 +34,12 @@ public:
 		: mVar(var),
 		  mDomain(SortManager::getInstance().getInterpreted(var.type())) {}
 
+    UVariable(const UVariable&) = default;
+    UVariable(UVariable&&) = default;
+
+    UVariable& operator=(const UVariable&) = default;
+    UVariable& operator=(UVariable&&) = default;
+
 	/**
 	 * Constructs an uninterpreted variable.
 	 * @param _var The variable of the uninterpreted variable to construct.
